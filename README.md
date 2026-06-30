@@ -300,4 +300,4 @@ MIT License
 
 ---
 
-**Pronto para começar? Clone o repositório e bom desenvolvimento! 🚀**
+
