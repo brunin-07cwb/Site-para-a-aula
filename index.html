@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agro Shop — Loja de Agronegócios</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="https://placehold.co/64x64?text=AS" alt="Logo Agro Shop" class="logo" />
+        <div>
+          <h1 class="title">Agro Shop</h1>
+          <p class="subtitle">Produtos e soluções para o campo</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav-link" data-section="home">Início</a>
+        <a href="#loja" class="nav-link" data-section="loja">Loja</a>
+        <a href="#sobre" class="nav-link" data-section="sobre">Sobre</a>
+        <a href="#contato" class="nav-link" data-section="contato">Contato</a>
+        <button class="cart-btn" id="open-cart" aria-label="Abrir carrinho">
+          Carrinho (<span id="cart-count">0</span>)
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div>
+          <h2>Bem-vindo ao Agro Shop</h2>
+          <p>Produtos selecionados para agricultura, pecuária e manejo sustentável.</p>
+          <a href="#loja" class="btn primary">Ir para a loja</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b1d2d3b0b9f8f8c9f1c2bcd3a7a8f95" alt="Campo" class="hero-img" />
+      </div>
+    </section>
+
+    <section class="products-section container" id="loja">
+      <h3>Loja — Produtos</h3>
+      <div id="products-grid" class="products-grid" aria-live="polite">
+        <!-- Produtos inseridos via JS -->
+      </div>
+    </section>
+
+    <section id="sobre" class="container about">
+      <h3>Sobre o Agro Shop</h3>
+      <p>O Agro Shop fornece insumos, ferramentas e informações para profissionais e produtores rurais. Nosso objetivo é conectar o melhor em tecnologia e insumos ao produtor.</p>
+    </section>
+
+    <section id="contato" class="container contact">
+      <h3>Contato</h3>
+      <form id="contact-form" class="contact-form">
+        <label>Nome
+          <input type="text" name="name" required />
+        </label>
+        <label>E-mail
+          <input type="email" name="email" required />
+        </label>
+        <label>Mensagem
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Agro Shop — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Modal detalhe do produto -->
+  <dialog id="product-modal" class="product-modal">
+    <button class="modal-close" id="close-modal" aria-label="Fechar">✕</button>
+    <div id="modal-content"></div>
+  </dialog>
+
+  <!-- Carrinho (sidebar simples) -->
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h4>Seu Carrinho</h4>
+      <button id="close-cart" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: R$ <span id="cart-total">0.00</span></div>
+      <button id="checkout-btn" class="btn primary">Finalizar compra</button>
+      <button id="clear-cart" class="btn">Limpar carrinho</button>
+    </div>
+  </aside>
+
+  <script src="js/shop.js"></script>
+</body>
+</html>
